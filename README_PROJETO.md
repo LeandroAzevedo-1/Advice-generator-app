@@ -43,3 +43,5 @@ Esse aplicativo é simples, mas envolve conceitos fundamentais de desenvolviment
 
 ## Veja como ficou o projeto final 
 <video controls src="./src/video/Video-exemplo.mp4" title="Vídeo exemplo"></video>
+
+<a href="https://leandroazevedo-1.github.io/Advice-generator-app/#" target="_blank">Clique aqui e veja como ficou o projeto.</a>
