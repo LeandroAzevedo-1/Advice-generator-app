@@ -1,0 +1,54 @@
+.container {
+    background-color:  hsl(218, 23%, 16%);
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container .conteudo {
+    background-color: hsl(217, 19%, 24%);
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+}
+ .conteudo .id-conselho {
+    color: hsl(150, 100%, 66%);
+    margin: 25px 0;
+    font-size: 16px;
+    letter-spacing: 5px;
+}
+   
+#mensagem-conselho {
+    color: hsl(193, 38%, 86%);
+    width: 90%;
+    margin-bottom: 25px;
+    font-weight: 700;
+    font-size: 20px;
+}
+.imagem-play {
+    width: 90%;
+    margin: 25px 0  50px 0;
+} 
+.btn-gerador-conselhos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:  hsl(150, 100%, 66%);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -25px;
+    opacity: 0.7;
+    transition: 0.3s ease-in-out;
+}
+.btn-gerador-conselhos:hover {
+    opacity: 1;
+    background-color: hsl(150, 100%, 50%);
+}
