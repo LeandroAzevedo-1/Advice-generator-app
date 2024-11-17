@@ -42,6 +42,8 @@ Esse aplicativo é simples, mas envolve conceitos fundamentais de desenvolviment
 - Criação de uma interface visualmente atraente e responsiva.
 
 ## Veja como ficou o projeto final 
-<video controls src="./src/video/Video-exemplo.mp4" title="Vídeo exemplo"></video>
 
-<a href="https://leandroazevedo-1.github.io/Advice-generator-app/#" target="_blank">Clique aqui.</a>
+
+<a href="https://leandroazevedo-1.github.io/Advice-generator-app/#" target="_blank">Clique aqui.
+    <img src="./src/video/Gerador-de-mensagem.gif" title="gig exemplo">
+</a>
