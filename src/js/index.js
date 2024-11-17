@@ -1,26 +1,29 @@
 const botaoGeradorConselho = document.querySelector(".btn-gerador-conselhos")
 const idConselho = document.querySelector('.id-conselho')
-const descricaoConselho = document.querySelector('#mensagem-conselho')
+const conselhorMensagem = document.querySelector('#mensagem-conselho')
 
-async function conselho() {
+async function getConselho() {
+    try{
+        const response = await fetch("https://api.adviceslip.com/advice")
 
-    const url = "https://api.adviceslip.com/advice"
-    const response = await fetch(url)
-    return await response.json() 
+    if(!response.ok){
+        throw new error("Ocorreu um erro ao tentar bucar informações da API.")
+    }
+
+        const conselhos = await response.json() 
+        const idDoConselho = conselhos.slip.id
+        const mensagemConselhos = conselhos.slip.advice
+        idConselho.innerText = `ADVICE #${idDoConselho}`
+        conselhorMensagem.innerText = `"${mensagemConselhos}"`
+    } catch(error){
+        console.error("Erro ao tentar buscar informações da API", error)
+    }
 }
-
-async function mensagemConselho(){
-    const conselhos = await conselho()
-    const idDoConselho = conselhos.slip.id
-    const mensagemConselhos = conselhos.slip.advice
-    idConselho.innerText = `ADVICE #${idDoConselho}`
-    descricaoConselho.innerText = `"${mensagemConselhos}"`
-}
-mensagemConselho()
+getConselho()
 
 botaoGeradorConselho.addEventListener('click', (e) => {
     e.preventDefault()
 
-    mensagemConselho()
+    getConselho()
  
 })
